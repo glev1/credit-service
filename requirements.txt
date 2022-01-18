@@ -13,5 +13,6 @@ black==20.8b1
 click==7.1.2
 Flask
 joblib
+typing
 pytest-cov==2.11.1
 requests==2.25.1
