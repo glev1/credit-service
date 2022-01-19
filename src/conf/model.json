@@ -1,6 +1,6 @@
 {
-  "LEARNING_RATE" : 0.1,
-  "MAX_DEPTH" : 3,
-  "N_ESTIMATORS" : 300,
-  "EVAL_METRIC" : "logloss"
+  "learning_rate" : 0.1,
+  "max_depth" : 3,
+  "n_estimators" : 300,
+  "eval_metric" : "logloss"
 }
