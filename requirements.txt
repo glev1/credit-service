@@ -6,7 +6,6 @@ seaborn
 plotly
 cufflinks
 xgboost
-logging
 pylint==2.7.2
 pytest==6.2.2
 black==20.8b1

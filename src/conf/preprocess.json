@@ -1,0 +1,4 @@
+{
+    "strat_imputer_num": "median",
+    "strat_imputer_cat": "most_frequent"
+}
