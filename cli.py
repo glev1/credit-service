@@ -19,11 +19,11 @@ def predictcli(profile):
 
     result = predict(payload)
     pred = result["predict"]
-    human_readable = result["human_readable_predict"]
+    human_readable = result["human_readable_predict"]['Chance of defaulting']
     if pred > 0.5 :
-        click.echo(click.style(human_readable['Chance of defaulting'], bg="green", fg="black"))
+        click.echo(click.style(human_readable, bg="green", fg="black"))
     else:
-        click.echo(click.style(human_readable['Chance of defaulting'], bg="red", fg="black"))
+        click.echo(click.style(human_readable, bg="red", fg="black"))
 
 
 if __name__ == "__main__":
