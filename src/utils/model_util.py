@@ -1,10 +1,21 @@
 import os
 import logging
-import pickle
-
-from xgboost import XGBClassifier
+from typing import Tuple
 
 logger = logging.getLogger(__name__)
+
+
+def get_features() -> Tuple[list, list]:
+
+    num_features = ['RevolvingUtilizationOfUnsecuredLines', 'DebtRatio', 'MonthlyIncome']
+
+
+    cat_features = ['age', 'NumberOfTime30-59DaysPastDueNotWorse',
+                                     'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate',
+                                     'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse',
+                                     'NumberOfDependents']
+
+    return num_features, cat_features
 
 
 def set_main_path() -> str:
@@ -15,22 +26,3 @@ def set_main_path() -> str:
             os.path.dirname(
                 os.path.abspath(__file__))))
 
-
-def save_model(model: XGBClassifier) -> None:
-    """Save latest trained model to models folder."""
-
-    main_path = set_main_path()
-    file = os.path.join(main_path, "src/resources/models/latest_model.pkl")
-
-    with open(file, 'wb') as outp:  # Overwrites any existing file.
-        pickle.dump(model, outp, pickle.HIGHEST_PROTOCOL)
-
-def load_model() -> XGBClassifier:
-    """Load latest trained model from models folder."""
-    main_path = set_main_path()
-    file = os.path.join(main_path, "src/resources/models/latest_model.pkl")
-
-    with open(file, 'rb') as inp:  # Overwrites any existing file.
-        model = pickle.load(inp)
-
-    return model
