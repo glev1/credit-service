@@ -41,7 +41,7 @@ def load_model():
 
 
 def process(X: pd.DataFrame) -> pd.DataFrame:
-
+    """Preprocess data"""
 
     num_pipeline = Pipeline([
     ('imputer', SimpleImputer(strategy=STRAT_IMPUTER_NUM)),
@@ -66,6 +66,7 @@ def process(X: pd.DataFrame) -> pd.DataFrame:
     return X_processed
 
 def retrain() -> float:
+    """Retrains the model"""
 
     X, y = load_data(target='SeriousDlqin2yrs')
 
@@ -97,6 +98,7 @@ def retrain() -> float:
 
 def human_readable_payload(predict: float):
     """Takes float and returns back human readable dictionary"""
+
     readable_prob = str("%.2f" % round(predict*100,2))
     result = {
         "Chance of defaulting": readable_prob,
@@ -105,7 +107,7 @@ def human_readable_payload(predict: float):
 
 
 def predict(X: dict):
-
+    """Takes features and predicts chance of defaulting"""
     X = [X['rev'], X['debt'], X['inc'], X['age'], X['lowdue'], X['cred'],
     X['highdue'], X['estate'], X['middue'], X['dep']]
 

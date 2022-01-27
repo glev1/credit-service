@@ -11,10 +11,8 @@ def cli():
 
 
 @cli.command("retrain")
-@click.option("--tsize", default=0.1, help="Test Size")
-def retrain(tsize):
+def retrain():
     """Retrain Model
-    You may want to extend this with more options, such as setting model_name
     """
 
     click.echo(click.style("Retraining Model", bg="green", fg="black"))
@@ -23,19 +21,21 @@ def retrain(tsize):
         click.style(f"Retrained Model Score: {score}", bg="blue", fg="black"))
 
 @cli.command("predict")
+@click.option("--profile", default="profile.json", help="File with profile")
 @click.option("--host", default="http://localhost:8080/predict", help="Host to query")
-def mkrequest(host):
+def mkrequest(profile, host):
     """Sends prediction to ML Endpoint"""
     
     click.echo(click.style(f"Querying host {host}",bg="green", fg="black"))
     
-    f = open('cli_fts.json')
+    f = open(profile)
     payload = json.load(f)
     f.close
 
     result = requests.post(url=host, json=payload)
-    click.echo(click.style(f"{result}", bg="red", fg="black"))
 
-
+    click.echo(click.style(result.text,
+         bg="green", fg="black"))
+  
 if __name__ == "__main__":
     cli()
