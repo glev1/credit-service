@@ -79,3 +79,9 @@ The `profile.json` is an example file containing:
     "highdue": 0
 }
 ```
+
+Further, `utilscli.py` perform some auxiliary functions, as model retrain:
+
+`./utilscli.py retrain`
+
+![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_retrain.png)
