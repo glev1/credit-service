@@ -58,4 +58,24 @@ The file `cli.py` is an endpoint that serves out predictions:
 
 ![CLI-help](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_help.png)
 
- To predict some profile's chance of defaulting.
+ To predict some profile's chance of defaulting, use the following:
+ `./cli.py --profile profile.json`
+
+![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_profile.png)
+
+The `profile.json` is an exaple file containing:
+
+```
+{
+    "inc": 9000,
+    "age": 30,
+    "rev": 0.7,
+    "debt": 0.8,
+    "dep": 2,
+    "cred": 5,
+    "estate": 2,
+    "lowdue": 2,
+    "middue": 0,
+    "highdue": 0
+}
+```
