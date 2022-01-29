@@ -56,5 +56,6 @@ credit-service
 
 The file `cli.py` is an endpoint that serves out predictions:
 
+![CLI-help](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_help.png)
 
  To predict some profile's chance of defaulting.
