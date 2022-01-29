@@ -16,6 +16,7 @@ You can access the dataset at [Kaggle - Give me Some Credit](https://www.kaggle.
 
 ## Application Structure
 
+`
 credit-service
 ├── app.py                      # Flask App
 ├── cli.py                      # CLI main code
@@ -50,4 +51,4 @@ credit-service
     ├── EDA.ipynb
     ├── Modeling.ipynb
     └── README.md
-
+`
