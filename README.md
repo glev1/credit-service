@@ -8,7 +8,7 @@ Banks play a crucial role in market economies. They decide who can get finance a
 
 Here, you can predict the probability that somebody will experience financial disstress in the next two years.
 
-The application is Continuos Deployed via AWS App Runner. [Acess it here.](https://d5vebxns3y.us-east-2.awsapprunner.com/)
+The application is Continuous Deployed via AWS App Runner. You can [access it here.](https://d5vebxns3y.us-east-2.awsapprunner.com/)
 
 ## Dataset
 
