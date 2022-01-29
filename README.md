@@ -44,11 +44,17 @@ credit-service
 │       ├── data_utils.py
 │       ├── __init__.py
 │       └── model_util.py
-├── datasets                        # Kaggle data
+├── datasets                    # Kaggle data
 │   ├── cs-training.csv                 # Training dataset
 │   └── Data Dictionary.xls             # Features description
-└── notebooks                       # Data Science
+└── notebooks                   # Data Science
     ├── EDA.ipynb
     ├── Modeling.ipynb
     └── README.md
 ```
+## CLI Tools
+
+The file `cli.py` is an endpoint that serves out predictions:
+
+
+ To predict some profile's chance of defaulting.
