@@ -87,3 +87,5 @@ Further, `utilscli.py` perform some auxiliary functions, as model retrain:
 ![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_retrain.png)
 
 You can also query the API via `./utilscli.py predict --profile profile.json --host http://localhost:8080/predict`. This allows you to change both host and the profile passed into the API.
+
+![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_predict.png)
