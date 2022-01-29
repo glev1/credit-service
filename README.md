@@ -10,7 +10,7 @@ Here, you can predict the probability that somebody will experience financial di
 
 ## Dataset
 
-You can access the dataset in [Kaggle - Give me Some Credit](https://www.kaggle.com/c/GiveMeSomeCredit/data)
+You can access the dataset at [Kaggle - Give me Some Credit](https://www.kaggle.com/c/GiveMeSomeCredit/data)
 
 ## Application Structure
 
