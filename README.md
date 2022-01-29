@@ -84,11 +84,11 @@ Further, `utilscli.py` perform some auxiliary functions, as model retrain:
 
 `./utilscli.py retrain`
 
-![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_retrain.png)
+![CLI-retrain](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_retrain.png)
 
 You can also query the API via `./utilscli.py predict --profile profile.json --host http://localhost:8080/predict`. This allows you to change both host and the profile passed into the API.
 
-![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_predict.png)
+![CLI-predict](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_predict.png)
 
 ## Flask Microservice
 
@@ -98,9 +98,20 @@ The Flask App run either locally or in a cloud deployment service like AWS App R
 
 First of all, run `python app.py`. You can access the application at `http://localhost:8080/`
 
-![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/flask_home.png)
+![flask-home](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/flask_home.png)
 
 You can query a prediction at `http://localhost:8080/webpredict/<profile>`. You can test it with `http://localhost:8080/webpredict/{'inc': 9000, 'age': 30, 'rev': 0.7, 'debt': 0.8, 'dep': 2, 'cred': 5, 'estate': 2, 'lowdue': 2, 'middue': 0, 'highdue': 0}`
 
-![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/flask_predict.png)
+![flask-predict](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/flask_predict.png)
 
+### AWS App Runner
+
+To create a Continuos Deployment of this application, you can create a service through AWS App Runner. All you have to do is point to the GitHub repo and configure CD operation.
+
+![flask-predict](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/app_runner_git.png)
+
+![flask-predict](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/app_runner_cd.png)
+
+AWS will provide a secure URL to access your production-ready service. [View example](https://d5vebxns3y.us-east-2.awsapprunner.com/).
+
+This web app has the same functionalities as the local one.
