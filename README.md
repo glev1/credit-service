@@ -106,7 +106,7 @@ You can query a prediction at `http://localhost:8080/webpredict/<profile>`. You 
 
 ### AWS App Runner
 
-To create a Continuos Deployment of this application, you can create a service through AWS App Runner. All you have to do is point to the GitHub repo and configure CD operation.
+To create a Continuous Deployment of this application, you can create a service through AWS App Runner. All you have to do is point to the GitHub repo and configure CD operation.
 
 ![flask-predict](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/app_runner_git.png)
 
