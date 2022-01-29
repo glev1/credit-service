@@ -63,7 +63,7 @@ The file `cli.py` is an endpoint that serves out predictions:
 
 ![CLI-profile](https://raw.githubusercontent.com/glev1/credit-service/main/.github/images/cli_profile.png)
 
-The `profile.json` is an exaple file containing:
+The `profile.json` is an example file containing:
 
 ```
 {
